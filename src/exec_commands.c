@@ -22,13 +22,14 @@ static int play_video(const char *url)
     pid_t pid = fork();
     if (pid == 0) {
         setsid(); 
-        execlp("mpv",
-               "mpv",
-               "--really-quiet",
-               "--no-terminal",
-               "--loop-file=inf",
-               url,
-               (char *)NULL);
+        execlp("cvlc",
+            "cvlc",
+            "--play-and-exit",
+            "--loop",
+            "--no-video-title-show",
+            "--fullscreen",
+            url,
+            (char *)NULL);
         exit(1);
     }
     if (pid > 0) {
