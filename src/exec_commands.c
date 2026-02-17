@@ -23,12 +23,14 @@ static int play_video(const char *url)
     if (pid == 0) {
         setsid(); 
         execlp("mpv",
-                "mpv",
-                "--really-quiet",
-                "--no-terminal",
-                "--loop-file=inf",
-                url,
-                (char *)NULL);
+            "mpv",
+            "--really-quiet",
+            "--no-terminal",
+            "--loop-file=inf",
+            "--input-default-bindings=yes",
+            "--input-vo-keyboard=yes",
+       url,
+       (char *)NULL);
         exit(1);
     }
     if (pid > 0) {
