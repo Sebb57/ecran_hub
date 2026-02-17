@@ -15,6 +15,6 @@ streamlit run dashboard.py &
 
 sleep 5
 
-python3 basic_video.py
+#python3 basic_video.py
 
 wait
