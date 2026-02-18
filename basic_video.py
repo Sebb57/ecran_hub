@@ -11,7 +11,7 @@ import time
 
 HOST = "127.0.0.1"
 PORT = 6767
-DEFAULT_VIDEO = "https://www.youtube.com/shorts/lIayj4dtmcI"
+DEFAULT_VIDEO = "https://www.youtube.com/shorts/QUoTSm0_nT0"
 
 def send_video(url):
     try:
